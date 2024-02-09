@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-09T20:42:41.861308" rpa="false" schemaversion="5">
+<suite id="s1" name="AutomatizaTestesAPI" source="C:\Users\silviaz\OneDrive\Documentos\repositorios\AutomatizaTestesAPI">
+<suite id="s1-s1" name="Auth" source="C:\Users\silviaz\OneDrive\Documentos\repositorios\AutomatizaTestesAPI\auth.robot">
+<test id="s1-s1-t1" name="TC 1.1: realizar autenticação com usuário válido" line="5">
+<kw name="POST /auth" owner="common">
+<kw name="Load Json From File" owner="JSONLibrary">
+<msg time="2024-02-09T20:42:42.112051" level="INFO">${body} = {'username': 'admin', 'password': 'password123'}</msg>
+<var>${body}</var>
+<arg>${PAYLOAD_DIR}${/}${filename}</arg>
+<doc>Load JSON from file.</doc>
+<status status="PASS" start="2024-02-09T20:42:42.097458" elapsed="0.014593"/>
+</kw>
+<kw name="POST" owner="RequestsLibrary">
+<msg time="2024-02-09T20:42:42.610941" level="INFO">POST Request : url=https://restful-booker.herokuapp.com/auth 
+ path_url=/auth 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '48', 'Content-Type': 'application/json'} 
+ body=b'{"username": "admin", "password": "password123"}' 
+ </msg>
+<msg time="2024-02-09T20:42:42.610941" level="INFO">POST Response : url=https://restful-booker.herokuapp.com/auth 
+ status=200, reason=OK 
+ headers={'Server': 'Cowboy', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1707511356&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=7JWBK0IiYY3upR6agACyui4%2F8F64s1wdTGw97i5XuUk%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1707511356&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=7JWBK0IiYY3upR6agACyui4%2F8F64s1wdTGw97i5XuUk%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '27', 'Etag': 'W/"1b-L3Dmyf22cYA3RBHJVJYUOvnsLBQ"', 'Date': 'Fri, 09 Feb 2024 20:42:36 GMT', 'Via': '1.1 vegur'} 
+ body={"token":"1865f766d916b1c"} 
+ </msg>
+<msg time="2024-02-09T20:42:42.611945" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>url=${BASE_URL}/auth</arg>
+<arg>json=${body}</arg>
+<doc>Sends a POST request.</doc>
+<status status="PASS" start="2024-02-09T20:42:42.112051" elapsed="0.499894"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2024-02-09T20:42:42.612941" elapsed="0.000990"/>
+</return>
+<msg time="2024-02-09T20:42:42.613931" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>PostAuthValid.json</arg>
+<status status="PASS" start="2024-02-09T20:42:42.096461" elapsed="0.518469"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2024-02-09T20:42:42.617931" elapsed="0.001999"/>
+</kw>
+<kw name="Validate Json" owner="common">
+<kw name="Validate Json By Schema File" owner="JSONLibrary">
+<arg>${response.json()}</arg>
+<arg>${CONTRACT_DIR}${/}${filename}</arg>
+<doc>Validate json object by json schema file.
+Arguments:
+    - json_object: json as a dictionary object.
+    - json_path: path to file with json schema</doc>
+<status status="PASS" start="2024-02-09T20:42:42.622933" elapsed="0.019646"/>
+</kw>
+<arg>${response}</arg>
+<arg>CreateTokenValid.json</arg>
+<status status="PASS" start="2024-02-09T20:42:42.621933" elapsed="0.020646"/>
+</kw>
+<status status="PASS" start="2024-02-09T20:42:42.095460" elapsed="0.547736"/>
+</test>
+<test id="s1-s1-t2" name="TC 1.2: realizar autenticação com usuário inválido" line="11">
+<kw name="POST /auth" owner="common">
+<kw name="Load Json From File" owner="JSONLibrary">
+<msg time="2024-02-09T20:42:42.647206" level="INFO">${body} = {'username': 'invalid', 'password': 'invalid'}</msg>
+<var>${body}</var>
+<arg>${PAYLOAD_DIR}${/}${filename}</arg>
+<doc>Load JSON from file.</doc>
+<status status="PASS" start="2024-02-09T20:42:42.646206" elapsed="0.001998"/>
+</kw>
+<kw name="POST" owner="RequestsLibrary">
+<msg time="2024-02-09T20:42:43.101504" level="INFO">POST Request : url=https://restful-booker.herokuapp.com/auth 
+ path_url=/auth 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '46', 'Content-Type': 'application/json'} 
+ body=b'{"username": "invalid", "password": "invalid"}' 
+ </msg>
+<msg time="2024-02-09T20:42:43.102496" level="INFO">POST Response : url=https://restful-booker.herokuapp.com/auth 
+ status=200, reason=OK 
+ headers={'Server': 'Cowboy', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1707511357&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=zmEuxL5AmvyVhi0BZtO1rYW9BiUuhNHcC3%2B47Ub%2BseA%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1707511357&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=zmEuxL5AmvyVhi0BZtO1rYW9BiUuhNHcC3%2B47Ub%2BseA%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '28', 'Etag': 'W/"1c-J3EiwfZwVQjKTKvpvazUfTni8fI"', 'Date': 'Fri, 09 Feb 2024 20:42:37 GMT', 'Via': '1.1 vegur'} 
+ body={"reason":"Bad credentials"} 
+ </msg>
+<msg time="2024-02-09T20:42:43.103509" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>url=${BASE_URL}/auth</arg>
+<arg>json=${body}</arg>
+<doc>Sends a POST request.</doc>
+<status status="PASS" start="2024-02-09T20:42:42.648204" elapsed="0.456296"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2024-02-09T20:42:43.104500" elapsed="0.000997"/>
+</return>
+<msg time="2024-02-09T20:42:43.106499" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>PostAuthInvalid.json</arg>
+<status status="PASS" start="2024-02-09T20:42:42.645204" elapsed="0.462299"/>
+</kw>
+<kw name="Validate Json" owner="common">
+<kw name="Validate Json By Schema File" owner="JSONLibrary">
+<arg>${response.json()}</arg>
+<arg>${CONTRACT_DIR}${/}${filename}</arg>
+<doc>Validate json object by json schema file.
+Arguments:
+    - json_object: json as a dictionary object.
+    - json_path: path to file with json schema</doc>
+<status status="PASS" start="2024-02-09T20:42:43.111038" elapsed="0.003078"/>
+</kw>
+<arg>${response}</arg>
+<arg>CreateTokenInvalid.json</arg>
+<status status="PASS" start="2024-02-09T20:42:43.109009" elapsed="0.005107"/>
+</kw>
+<status status="PASS" start="2024-02-09T20:42:42.644203" elapsed="0.470650"/>
+</test>
+<status status="PASS" start="2024-02-09T20:42:41.901406" elapsed="1.219485"/>
+</suite>
+<status status="PASS" start="2024-02-09T20:42:41.866307" elapsed="1.258653"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="AutomatizaTestesAPI">AutomatizaTestesAPI</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="Auth">AutomatizaTestesAPI.Auth</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
