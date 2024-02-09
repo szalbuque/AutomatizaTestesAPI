@@ -21,3 +21,7 @@ POST /auth
     ${body}    Load Json From File    ${PAYLOAD_DIR}${/}${filename}
     ${response}    POST    url=${BASE_URL}/auth    json=${body}
     RETURN    ${response}
+
+GET /booking
+    ${response}    GET      url=${BASE_URL}/booking
+    RETURN    ${response}
