@@ -7,3 +7,9 @@ TC 2: obter reservas
     
     Status Should Be     200
     Validate Json    ${response}    GetBooking.json
+
+TC 3: obter reserva por ID
+    # usar um ID fixo para o primeiro teste
+    # ideal é pegar um ID aleatório
+    ${response}    GET /booking/1
+    

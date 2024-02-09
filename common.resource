@@ -25,3 +25,7 @@ POST /auth
 GET /booking
     ${response}    GET      url=${BASE_URL}/booking
     RETURN    ${response}
+
+GET /booking/${id}
+    ${response}    GET      url=${BASE_URL}/booking/${id}
+    RETURN    ${response}
