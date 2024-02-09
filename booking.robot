@@ -11,5 +11,6 @@ TC 2: obter reservas
 TC 3: obter reserva por ID
     # usar um ID fixo para o primeiro teste
     # ideal é pegar um ID aleatório
-    ${response}    GET /booking/1
-    
+    ${response}    GET /booking
+    ${id}     Select Random BookingId From Json    ${response}
+    ${response}    GET /booking/${id}

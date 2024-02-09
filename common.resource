@@ -29,3 +29,10 @@ GET /booking
 GET /booking/${id}
     ${response}    GET      url=${BASE_URL}/booking/${id}
     RETURN    ${response}
+
+Select Random BookingId From Json
+    [Arguments]    ${response}
+    #usar a biblioteca Random do Python
+    #escolher aleatoriamente um id
+    ${bookingid}    Evaluate    random.choice($response.json())['bookingid']    modules=random
+    RETURN    ${bookingid}
