@@ -22,6 +22,11 @@ POST /auth
     ${response}    POST    url=${BASE_URL}/auth    json=${body}
     RETURN    ${response}
 
+Wrapper POST /auth
+    ${response}    POST /auth    PostAuthValid.json
+    ${TOKEN}    Set Variable    ${response.json()}[token]
+    Set Test Variable    ${TOKEN}
+
 GET /booking
     ${response}    GET      url=${BASE_URL}/booking
     RETURN    ${response}
@@ -30,9 +35,20 @@ GET /booking/${id}
     ${response}    GET      url=${BASE_URL}/booking/${id}
     RETURN    ${response}
 
+PUT /booking/${id}
+    [Arguments]    ${filename}
+    # pega o body de um arquivo que foi preparado anteriormente
+    ${body}    Load Json From File    ${PAYLOAD_DIR}${/}${filename}
+    # insere o token no header
+    ${headers}    Create Dictionary    Cookie=token\=${TOKEN}
+    # faz o PUT usando o id passado como parâmetro e o body que estava no arquivo
+    ${response}    PUT    url=${BASE_URL}/booking/${id}    json=${body}    headers=${headers}
+    RETURN    ${response}
+
 Select Random BookingId From Json
     [Arguments]    ${response}
     #usar a biblioteca Random do Python
     #escolher aleatoriamente um id
     ${bookingid}    Evaluate    random.choice($response.json())['bookingid']    modules=random
     RETURN    ${bookingid}
+

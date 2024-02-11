@@ -1,82 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-09T21:49:41.937984" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-11T17:17:46.718767" rpa="false" schemaversion="5">
 <suite id="s1" name="AutomatizaTestesAPI" source="C:\Users\silviaz\OneDrive\Documentos\repositorios\AutomatizaTestesAPI">
 <suite id="s1-s1" name="Booking" source="C:\Users\silviaz\OneDrive\Documentos\repositorios\AutomatizaTestesAPI\booking.robot">
-<test id="s1-s1-t1" name="TC 3: obter reserva por ID" line="11">
+<test id="s1-s1-t1" name="TC 2: obter reservas" line="5">
 <kw name="GET /booking" owner="common">
 <kw name="GET" owner="RequestsLibrary">
-<msg time="2024-02-09T21:49:42.897837" level="INFO">GET Request : url=https://restful-booker.herokuapp.com/booking 
+<msg time="2024-02-11T17:17:47.599149" level="INFO">GET Request : url=https://restful-booker.herokuapp.com/booking 
  path_url=/booking 
  headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2024-02-09T21:49:42.898828" level="INFO">GET Response : url=https://restful-booker.herokuapp.com/booking 
+<msg time="2024-02-11T17:17:47.600148" level="INFO">GET Response : url=https://restful-booker.herokuapp.com/booking 
  status=200, reason=OK 
- headers={'Server': 'Cowboy', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1707515382&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=UgehXbBzqGnyH736%2BSgQMFHRLEbrNpGaSLMWpQQ3apU%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1707515382&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=UgehXbBzqGnyH736%2BSgQMFHRLEbrNpGaSLMWpQQ3apU%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '61832', 'Etag': 'W/"f188-I3Ud+0TtYiREVPZAE160KlHuyDU"', 'Date': 'Fri, 09 Feb 2024 21:49:42 GMT', 'Via': '1.1 vegur'} 
- body=[{"bookingid":4145},{"bookingid":3036},{"bookingid":1420},{"bookingid":1088},{"bookingid":3401},{"bookingid":1502},{"bookingid":2144},{"bookingid":3926},{"bookingid":3750},{"bookingid":3530},{"bookingid":2209},{"bookingid":42},{"bookingid":3651},{"bookingid":2649},{"bookingid":523},{"bookingid":4275},{"bookingid":2932},{"bookingid":4536},{"bookingid":1058},{"bookingid":2501},{"bookingid":284},{"bookingid":191},{"bookingid":1211},{"bookingid":4574},{"bookingid":827},{"bookingid":2048},{"bookingid":4718},{"bookingid":3729},{"bookingid":265},{"bookingid":4635},{"bookingid":1003},{"bookingid":4100},{"bookingid":729},{"bookingid":4230},{"bookingid":4177},{"bookingid":2664},{"bookingid":4164},{"bookingid":3985},{"bookingid":654},{"bookingid":2391},{"bookingid":652},{"bookingid":1841},{"bookingid":2284},{"bookingid":905},{"bookingid":1800},{"bookingid":4480},{"bookingid":4422},{"bookingid":4729},{"bookingid":1194},{"bookingid":4170},{"bookingid":2708},{"bookingid":4788},{"bookingid":292},{"bookingid":3057},{"bookingid":3690},{"bookingid":2747},{"bookingid":1587},{"bookingid":628},{"bookingid":2396},{"bookingid":4154},{"bookingid":1493},{"bookingid":872},{"bookingid":4707},{"bookingid":4723},{"bookingid":1037},{"bookingid":433},{"bookingid":1011},{"bookingid":3228},{"bookingid":566},{"bookingid":1475},{"bookingid":1617},{"bookingid":3459},{"bookingid":1814},{"bookingid":1293},{"bookingid":2205},{"bookingid":942},{"bookingid":2378},{"bookingid":2742},{"bookingid":1744},{"bookingid":1891},{"bookingid":1385},{"bookingid":613},{"bookingid":1284},{"bookingid":1515},{"bookingid":4286},{"bookingid":76},{"bookingid":2731},{"bookingid":985},{"bookingid":3047},{"bookingid":1926},{"bookingid":1275},{"bookingid":2311},{"bookingid":4577},{"bookingid":3246},{"bookingid":4217},{"bookingid":43},{"bookingid":4805},{"bookingid":2070},{"bookingid":1406},{"bookingid":859},{"bookingid":3855},{"bookingid":4401},{"bookingid":3654},{"bookingid":4811},{"bookingid":1764},{"bookingid":4476},{"bookingid":4514},{"bookingid":1388},{"bookingid":3244},{"bookingid":3667},{"bookingid":2015},{"bookingid":763},{"bookingid":2355},{"bookingid":929},{"bookingid":2013},{"bookingid":3316},{"bookingid":2894},{"bookingid":3802},{"bookingid":3260},{"bookingid":355},{"bookingid":4051},{"bookingid":2552},{"bookingid":4808},{"bookingid":4831},{"bookingid":3585},{"bookingid":2995},{"bookingid":506},{"bookingid":2414},{"bookingid":2274},{"bookingid":2276},{"bookingid":3364},{"bookingid":1813},{"bookingid":1005},{"bookingid":664},{"bookingid":1977},{"bookingid":1008},{"bookingid":2634},{"bookingid":2072},{"bookingid":2029},{"bookingid":1200},{"bookingid":2817},{"bookingid":1100},{"bookingid":2164},{"bookingid":3946},{"bookingid":2101},{"bookingid":3011},{"bookingid":2719},{"bookingid":1328},{"bookingid":3859},{"bookingid":4769},{"bookingid":687},{"bookingid":4797},{"bookingid":212},{"bookingid":4370},{"bookingid":1432},{"bookingid":1068},{"bookingid":4817},{"bookingid":4770},{"bookingid":2997},{"bookingid":4827},{"bookingid":4646},{"bookingid":3025},{"bookingid":1212},{"bookingid":4440},{"bookingid":251},{"bookingid":2416},{"bookingid":1523},{"bookingid":3734},{"bookingid":3239},{"bookingid":1696},{"bookingid":2320},{"bookingid":277},{"bookingid":65},{"bookingid":1760},{"bookingid":3216},{"bookingid":3158},{"bookingid":700},{"bookingid":2681},{"bookingid":3164},{"bookingid":2839},{"bookingid":3282},{"bookingid":146},{"bookingid":2326},{"bookingid":3445},{"bookingid":3728},{"bookingid":4838},{"bookingid":590},{"bookingid":4474},{"bookingid":860},{"bookingid":4445},{"bookingid":3639},{"bookingid":1567},{"bookingid":150},{"bookingid":469},{"bookingid":3082},{"bookingid":4178},{"bookingid":1076},{"bookingid":2689},{"bookingid":1665},{"bookingid":1481},{"bookingid":1927},{"bookingid":1178},{"bookingid":1778},{"bookingid":3803},{"bookingid":2206},{"bookingid":59},{"bookingid":4837},{"bookingid":1080},{"bookingid":2658},{"bookingid":1490},{"bookingid":1996},{"bookingid":1614},{"bookingid":2173},{"bookingid":3725},{"bookingid":1600},{"bookingid":3135},{"bookingid":849},{"bookingid":3823},{"bookingid":1633},{"bookingid":4323},{"bookingid":389},{"bookingid":4030},{"bookingid":118},{"bookingid":1824},{"bookingid":80},{"bookingid":1565},{"bookingid":921},{"bookingid":1693},{"bookingid":2231},{"bookingid":3085},{"bookingid":1060},{"bookingid":156},{"bookingid":2849},{"bookingid":1994},{"bookingid":4816},{"bookingid":4204},{"bookingid":3405},{"bookingid":4699},{"bookingid":2242},{"bookingid":3392},{"bookingid":495},{"bookingid":400},{"bookingid":983},{"bookingid":1426},{"bookingid":1097},{"bookingid":2575},{"bookingid":4508},{"bookingid":3509},{"bookingid":3539},{"bookingid":3226},{"bookingid":2818},{"bookingid":3178},{"bookingid":1025},{"bookingid":412},{"bookingid":3932},{"bookingid":1292},{"bookingid":2170},{"bookingid":4429},{"bookingid":1217},{"bookingid":834},{"bookingid":885},{"bookingid":3002},{"bookingid":4448},{"bookingid":915},{"bookingid":3207},{"bookingid":711},{"bookingid":4742},{"bookingid":3979},{"bookingid":4041},{"bookingid":1105},{"bookingid":3574},{"bookingid":259},{"bookingid":1137},{"bookingid":3119},{"bookingid":1837},{"bookingid":1184},{"bookingid":4709},{"bookingid":410},{"bookingid":739},{"bookingid":1103},{"bookingid":4653},{"bookingid":3786},{"bookingid":1055},{"bookingid":4799},{"bookingid":3892},{"bookingid":2847},{"bookingid":1024},{"bookingid":232},{"bookingid":2677},{"bookingid":2598},{"bookingid":2003},{"bookingid":3217},{"bookingid":3740},{"bookingid":2914},{"bookingid":4163},{"bookingid":843},{"bookingid":2505},{"bookingid":115},{"bookingid":4034},{"bookingid":4425},{"bookingid":1066},{"bookingid":3},{"bookingid":4657},{"bookingid":4802},{"bookingid":3710},{"bookingid":998},{"bookingid":3073},{"bookingid":2211},{"bookingid":1950},{"bookingid":2815},{"bookingid":4459},{"bookingid":3650},{"bookingid":3050},{"bookingid":2930},{"bookingid":4263},{"bookingid":2138},{"bookingid":1310},{"bookingid":3747},{"bookingid":4603},{"bookingid":3367},{"bookingid":3833},{"bookingid":550},{"bookingid":532},{"bookingid":473},{"bookingid":2187},{"bookingid":3899},{"bookingid":3563},{"bookingid":4},{"bookingid":1154},{"bookingid":4549},{"bookingid":519},{"bookingid":494},{"bookingid":557},{"bookingid":1635},{"bookingid":596},{"bookingid":1771},{"bookingid":1704},{"bookingid":307},{"bookingid":110},{"bookingid":4791},{"bookingid":1519},{"bookingid":3410},{"bookingid":2853},{"bookingid":2564},{"bookingid":407},{"bookingid":4289},{"bookingid":167},{"bookingid":4114},{"bookingid":3988},{"bookingid":2851},{"bookingid":4264},{"bookingid":4324},{"bookingid":3939},{"bookingid":90},{"bookingid":3542},{"bookingid":2902},{"bookingid":3619},{"bookingid":2557},{"bookingid":4424},{"bookingid":367},{"bookingid":1884},{"bookingid":3088},{"bookingid":922},{"bookingid":2041},{"bookingid":2919},{"bookingid":3286},{"bookingid":69},{"bookingid":4763},{"bookingid":2554},{"bookingid":476},{"bookingid":1796},{"bookingid":775},{"bookingid":1973},{"bookingid":4704},{"bookingid":3116},{"bookingid":4242},{"bookingid":2200},{"bookingid":3020},{"bookingid":2363},{"bookingid":3319},{"bookingid":1305},{"bookingid":3936},{"bookingid":2344},{"bookingid":238},{"bookingid":565},{"bookingid":771},{"bookingid":3791},{"bookingid":3512},{"bookingid":3048},{"bookingid":2625},{"bookingid":2699},{"bookingid":678},{"bookingid":3094},{"bookingid":4776},{"bookingid":3185},{"bookingid":1353},{"bookingid":4469},{"bookingid":2220},{"bookingid":75},{"bookingid":4026},{"bookingid":3305},{"bookingid":858},{"bookingid":4779},{"bookingid":3904},{"bookingid":1990},{"bookingid":4745},{"bookingid":619},{"bookingid":1002},{"bookingid":4573},{"bookingid":2709},{"bookingid":3206},{"bookingid":1818},{"bookingid":2304},{"bookingid":3468},{"bookingid":4555},{"bookingid":1528},{"bookingid":1125},{"bookingid":681},{"bookingid":581},{"bookingid":1046},{"bookingid":1139},{"bookingid":997},{"bookingid":841},{"bookingid":1671},{"bookingid":4829},{"bookingid":2561},{"bookingid":4222},{"bookingid":3045},{"bookingid":1019},{"bookingid":1656},{"bookingid":3255},{"bookingid":1993},{"bookingid":1712},{"bookingid":2534},{"bookingid":2372},{"bookingid":4125},{"bookingid":4748},{"bookingid":1067},{"bookingid":4468},{"bookingid":1435},{"bookingid":3778},{"bookingid":1446},{"bookingid":4693},{"bookingid":3078},{"bookingid":1012},{"bookingid":992},{"bookingid":791},{"bookingid":1863},{"bookingid":3080},{"bookingid":2523},{"bookingid":4060},{"bookingid":1929},{"bookingid":3902},{"bookingid":2332},{"bookingid":840},{"bookingid":2279},{"bookingid":2801},{"bookingid":923},{"bookingid":4046},{"bookingid":3755},{"bookingid":2965},{"bookingid":2802},{"bookingid":4394},{"bookingid":1227},{"bookingid":1583},{"bookingid":2248},{"bookingid":993},{"bookingid":4318},{"bookingid":4627},{"bookingid":1332},{"bookingid":1107},{"bookingid":3471},{"bookingid":114},{"bookingid":3289},{"bookingid":1372},{"bookingid":2957},{"bookingid":1620},{"bookingid":2362},{"bookingid":895},{"bookingid":4804},{"bookingid":84},{"bookingid":2760},{"bookingid":3952},{"bookingid":2162},{"bookingid":246},{"bookingid":1016},{"bookingid":129},{"bookingid":1789},{"bookingid":1697},{"bookingid":3780},{"bookingid":503},{"bookingid":1489},{"bookingid":4312},{"bookingid":3521},{"bookingid":4834},{"bookingid":1766},{"bookingid":272},{"bookingid":696},{"bookingid":4581},{"bookingid":1197},{"bookingid":1910},{"bookingid":2613},{"bookingid":1605},{"bookingid":4284},{"bookingid":1213},{"bookingid":160},{"bookingid":2748},{"bookingid":3330},{"bookingid":4620},{"bookingid":4542},{"bookingid":2230},{"bookingid":3275},{"bookingid":3613},{"bookingid":1596},{"bookingid":1191},{"bookingid":3730},{"bookingid":901},{"bookingid":2608},{"bookingid":3032},{"bookingid":610},{"bookingid":4712},{"bookingid":1589},{"bookingid":1017},{"bookingid":1628},{"bookingid":375},{"bookingid":2990},{"bookingid":4244},{"bookingid":1114},{"bookingid":4017},{"bookingid":573},{"bookingid":52},{"bookingid":1591},{"bookingid":1... (set the log level to DEBUG or TRACE to see the full content) 
+ headers={'Server': 'Cowboy', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1707671860&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=OIKDVaLWYP%2FuO%2Bp2B23WJKQsDqHm1RU83C1r5g%2Bwh9c%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1707671860&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=OIKDVaLWYP%2FuO%2Bp2B23WJKQsDqHm1RU83C1r5g%2Bwh9c%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '36889', 'Etag': 'W/"9019-DT0Cf9KJ6FDUY5RVRRN3vTC5wsA"', 'Date': 'Sun, 11 Feb 2024 17:17:40 GMT', 'Via': '1.1 vegur'} 
+ body=[{"bookingid":2340},{"bookingid":1414},{"bookingid":2155},{"bookingid":1700},{"bookingid":2539},{"bookingid":1376},{"bookingid":1074},{"bookingid":1258},{"bookingid":1719},{"bookingid":1950},{"bookingid":1967},{"bookingid":2288},{"bookingid":1629},{"bookingid":510},{"bookingid":723},{"bookingid":127},{"bookingid":829},{"bookingid":1},{"bookingid":1940},{"bookingid":922},{"bookingid":677},{"bookingid":2883},{"bookingid":1549},{"bookingid":1936},{"bookingid":879},{"bookingid":2422},{"bookingid":1787},{"bookingid":2281},{"bookingid":1185},{"bookingid":2523},{"bookingid":2525},{"bookingid":676},{"bookingid":2375},{"bookingid":2417},{"bookingid":615},{"bookingid":1010},{"bookingid":2480},{"bookingid":431},{"bookingid":2233},{"bookingid":752},{"bookingid":292},{"bookingid":996},{"bookingid":650},{"bookingid":1605},{"bookingid":1061},{"bookingid":550},{"bookingid":907},{"bookingid":734},{"bookingid":341},{"bookingid":568},{"bookingid":2406},{"bookingid":265},{"bookingid":2779},{"bookingid":1208},{"bookingid":2632},{"bookingid":2240},{"bookingid":2696},{"bookingid":1533},{"bookingid":1737},{"bookingid":415},{"bookingid":1130},{"bookingid":1686},{"bookingid":2703},{"bookingid":235},{"bookingid":95},{"bookingid":352},{"bookingid":480},{"bookingid":284},{"bookingid":764},{"bookingid":159},{"bookingid":1699},{"bookingid":1672},{"bookingid":1809},{"bookingid":1087},{"bookingid":2212},{"bookingid":1198},{"bookingid":1553},{"bookingid":518},{"bookingid":306},{"bookingid":1721},{"bookingid":1503},{"bookingid":1902},{"bookingid":180},{"bookingid":798},{"bookingid":1200},{"bookingid":1847},{"bookingid":1132},{"bookingid":2254},{"bookingid":266},{"bookingid":833},{"bookingid":461},{"bookingid":2474},{"bookingid":100},{"bookingid":1228},{"bookingid":383},{"bookingid":1874},{"bookingid":2004},{"bookingid":493},{"bookingid":1268},{"bookingid":499},{"bookingid":2404},{"bookingid":386},{"bookingid":1912},{"bookingid":2323},{"bookingid":1102},{"bookingid":2055},{"bookingid":2181},{"bookingid":2048},{"bookingid":2228},{"bookingid":562},{"bookingid":740},{"bookingid":110},{"bookingid":952},{"bookingid":1506},{"bookingid":1757},{"bookingid":2690},{"bookingid":1126},{"bookingid":440},{"bookingid":464},{"bookingid":1347},{"bookingid":2122},{"bookingid":2560},{"bookingid":705},{"bookingid":2363},{"bookingid":2435},{"bookingid":2097},{"bookingid":735},{"bookingid":1635},{"bookingid":1165},{"bookingid":347},{"bookingid":1161},{"bookingid":747},{"bookingid":2771},{"bookingid":336},{"bookingid":2797},{"bookingid":2806},{"bookingid":406},{"bookingid":2280},{"bookingid":1543},{"bookingid":2307},{"bookingid":55},{"bookingid":766},{"bookingid":421},{"bookingid":812},{"bookingid":652},{"bookingid":128},{"bookingid":2672},{"bookingid":2565},{"bookingid":18},{"bookingid":2879},{"bookingid":2791},{"bookingid":150},{"bookingid":2482},{"bookingid":179},{"bookingid":1097},{"bookingid":2146},{"bookingid":388},{"bookingid":1584},{"bookingid":1137},{"bookingid":987},{"bookingid":1718},{"bookingid":1730},{"bookingid":2318},{"bookingid":2180},{"bookingid":287},{"bookingid":1495},{"bookingid":2535},{"bookingid":2524},{"bookingid":2821},{"bookingid":1195},{"bookingid":583},{"bookingid":1650},{"bookingid":1942},{"bookingid":1644},{"bookingid":1952},{"bookingid":1389},{"bookingid":2256},{"bookingid":444},{"bookingid":671},{"bookingid":1714},{"bookingid":1128},{"bookingid":945},{"bookingid":2613},{"bookingid":2803},{"bookingid":2095},{"bookingid":1171},{"bookingid":626},{"bookingid":1044},{"bookingid":2421},{"bookingid":1783},{"bookingid":1871},{"bookingid":417},{"bookingid":126},{"bookingid":2739},{"bookingid":2633},{"bookingid":2060},{"bookingid":531},{"bookingid":220},{"bookingid":400},{"bookingid":873},{"bookingid":5},{"bookingid":759},{"bookingid":511},{"bookingid":632},{"bookingid":1563},{"bookingid":1720},{"bookingid":2662},{"bookingid":791},{"bookingid":2321},{"bookingid":2005},{"bookingid":981},{"bookingid":515},{"bookingid":283},{"bookingid":2571},{"bookingid":1277},{"bookingid":1618},{"bookingid":2208},{"bookingid":171},{"bookingid":1249},{"bookingid":1695},{"bookingid":1761},{"bookingid":334},{"bookingid":1237},{"bookingid":2839},{"bookingid":1995},{"bookingid":1606},{"bookingid":1482},{"bookingid":836},{"bookingid":2191},{"bookingid":561},{"bookingid":2738},{"bookingid":1665},{"bookingid":1052},{"bookingid":299},{"bookingid":2387},{"bookingid":853},{"bookingid":685},{"bookingid":2502},{"bookingid":782},{"bookingid":2578},{"bookingid":679},{"bookingid":2881},{"bookingid":2782},{"bookingid":199},{"bookingid":2160},{"bookingid":577},{"bookingid":1692},{"bookingid":2178},{"bookingid":2330},{"bookingid":2648},{"bookingid":1018},{"bookingid":70},{"bookingid":640},{"bookingid":746},{"bookingid":402},{"bookingid":2721},{"bookingid":1945},{"bookingid":2342},{"bookingid":460},{"bookingid":704},{"bookingid":1612},{"bookingid":2142},{"bookingid":1101},{"bookingid":208},{"bookingid":2353},{"bookingid":2287},{"bookingid":521},{"bookingid":253},{"bookingid":1123},{"bookingid":589},{"bookingid":2098},{"bookingid":894},{"bookingid":1070},{"bookingid":778},{"bookingid":1708},{"bookingid":2311},{"bookingid":980},{"bookingid":226},{"bookingid":721},{"bookingid":719},{"bookingid":363},{"bookingid":639},{"bookingid":2755},{"bookingid":2120},{"bookingid":2876},{"bookingid":1813},{"bookingid":2677},{"bookingid":1890},{"bookingid":1619},{"bookingid":2718},{"bookingid":1199},{"bookingid":965},{"bookingid":1378},{"bookingid":1271},{"bookingid":1540},{"bookingid":2646},{"bookingid":1577},{"bookingid":919},{"bookingid":1219},{"bookingid":528},{"bookingid":684},{"bookingid":877},{"bookingid":1575},{"bookingid":250},{"bookingid":2381},{"bookingid":1406},{"bookingid":2210},{"bookingid":1465},{"bookingid":302},{"bookingid":1390},{"bookingid":2126},{"bookingid":2041},{"bookingid":2600},{"bookingid":1633},{"bookingid":1413},{"bookingid":124},{"bookingid":2306},{"bookingid":278},{"bookingid":114},{"bookingid":453},{"bookingid":1152},{"bookingid":2012},{"bookingid":2193},{"bookingid":1351},{"bookingid":186},{"bookingid":783},{"bookingid":841},{"bookingid":2766},{"bookingid":2809},{"bookingid":1590},{"bookingid":2528},{"bookingid":2826},{"bookingid":138},{"bookingid":192},{"bookingid":11},{"bookingid":1028},{"bookingid":1072},{"bookingid":2242},{"bookingid":1003},{"bookingid":580},{"bookingid":1265},{"bookingid":1781},{"bookingid":312},{"bookingid":934},{"bookingid":2197},{"bookingid":820},{"bookingid":2604},{"bookingid":335},{"bookingid":4},{"bookingid":730},{"bookingid":850},{"bookingid":1119},{"bookingid":1216},{"bookingid":223},{"bookingid":281},{"bookingid":957},{"bookingid":122},{"bookingid":898},{"bookingid":1556},{"bookingid":1486},{"bookingid":1085},{"bookingid":2762},{"bookingid":667},{"bookingid":28},{"bookingid":672},{"bookingid":54},{"bookingid":420},{"bookingid":1924},{"bookingid":2854},{"bookingid":2828},{"bookingid":1118},{"bookingid":1641},{"bookingid":1642},{"bookingid":728},{"bookingid":296},{"bookingid":2322},{"bookingid":247},{"bookingid":36},{"bookingid":753},{"bookingid":851},{"bookingid":1627},{"bookingid":1815},{"bookingid":861},{"bookingid":1396},{"bookingid":2863},{"bookingid":2665},{"bookingid":2701},{"bookingid":414},{"bookingid":85},{"bookingid":2389},{"bookingid":608},{"bookingid":83},{"bookingid":901},{"bookingid":1383},{"bookingid":2503},{"bookingid":1957},{"bookingid":2794},{"bookingid":603},{"bookingid":1278},{"bookingid":1416},{"bookingid":2301},{"bookingid":2046},{"bookingid":2058},{"bookingid":46},{"bookingid":2851},{"bookingid":1449},{"bookingid":2203},{"bookingid":2354},{"bookingid":1448},{"bookingid":537},{"bookingid":800},{"bookingid":1353},{"bookingid":89},{"bookingid":2039},{"bookingid":698},{"bookingid":1440},{"bookingid":167},{"bookingid":1609},{"bookingid":274},{"bookingid":178},{"bookingid":1895},{"bookingid":748},{"bookingid":2630},{"bookingid":2865},{"bookingid":399},{"bookingid":87},{"bookingid":737},{"bookingid":1937},{"bookingid":2400},{"bookingid":2868},{"bookingid":474},{"bookingid":1827},{"bookingid":84},{"bookingid":2774},{"bookingid":2776},{"bookingid":727},{"bookingid":165},{"bookingid":2685},{"bookingid":2531},{"bookingid":2189},{"bookingid":1478},{"bookingid":656},{"bookingid":2195},{"bookingid":1801},{"bookingid":260},{"bookingid":1086},{"bookingid":2517},{"bookingid":2204},{"bookingid":1040},{"bookingid":1771},{"bookingid":357},{"bookingid":1436},{"bookingid":1474},{"bookingid":903},{"bookingid":175},{"bookingid":2458},{"bookingid":1728},{"bookingid":547},{"bookingid":1851},{"bookingid":1667},{"bookingid":2572},{"bookingid":1824},{"bookingid":1207},{"bookingid":1814},{"bookingid":2383},{"bookingid":1869},{"bookingid":2802},{"bookingid":1614},{"bookingid":1470},{"bookingid":1645},{"bookingid":2216},{"bookingid":1296},{"bookingid":245},{"bookingid":1573},{"bookingid":1443},{"bookingid":1035},{"bookingid":564},{"bookingid":277},{"bookingid":1568},{"bookingid":1260},{"bookingid":215},{"bookingid":1822},{"bookingid":1670},{"bookingid":1906},{"bookingid":1380},{"bookingid":2253},{"bookingid":2557},{"bookingid":2760},{"bookingid":1998},{"bookingid":2469},{"bookingid":2401},{"bookingid":1986},{"bookingid":2830},{"bookingid":1961},{"bookingid":967},{"bookingid":2823},{"bookingid":2347},{"bookingid":2440},{"bookingid":63},{"bookingid":1856},{"bookingid":1897},{"bookingid":1671},{"bookingid":459},{"bookingid":756},{"bookingid":2154},{"bookingid":770},{"bookingid":690},{"bookingid":1092},{"bookingid":2594},{"bookingid":1330},{"bookingid":628},{"bookingid":546},{"bookingid":1372},{"bookingid":2702},{"bookingid":353},{"bookingid":532},{"bookingid":1502},{"bookingid":1280},{"bookingid":1182},{"bookingid":2573},{"bookingid":1479},{"bookingid":1363},{"bookingid":305},{"bookingid":1023},{"bookingid":1848},{"bookingid":349},{"bookingid":270},{"bookingid":331},{"bookingid":1445},{"bookingid":1659},{"bookingid":1647},{"bookingid":2551},{"bookingid":862},{"bookingid":1887},{"bookingid":1790},{"bookingid":805},{"bookingid":1366},{"bookingid":1772},{... (set the log level to DEBUG or TRACE to see the full content) 
  </msg>
-<msg time="2024-02-09T21:49:42.901827" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2024-02-11T17:17:47.600148" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>url=${BASE_URL}/booking</arg>
 <doc>Sends a GET request.</doc>
-<status status="PASS" start="2024-02-09T21:49:42.179827" elapsed="0.723000"/>
+<status status="PASS" start="2024-02-11T17:17:46.993215" elapsed="0.606933"/>
 </kw>
 <return>
 <value>${response}</value>
-<status status="PASS" start="2024-02-09T21:49:42.902827" elapsed="0.001000"/>
+<status status="PASS" start="2024-02-11T17:17:47.600148" elapsed="0.001403"/>
 </return>
-<msg time="2024-02-09T21:49:42.904830" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2024-02-11T17:17:47.601551" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
-<status status="PASS" start="2024-02-09T21:49:42.178827" elapsed="0.727003"/>
-</kw>
-<kw name="Select Random BookingId From Json" owner="common">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-02-09T21:49:42.916033" level="INFO">${bookingid} = 1488</msg>
-<var>${bookingid}</var>
-<arg>random.choice($response.json())['bookingid']</arg>
-<arg>modules=random</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-02-09T21:49:42.909830" elapsed="0.006203"/>
-</kw>
-<return>
-<value>${bookingid}</value>
-<status status="PASS" start="2024-02-09T21:49:42.916934" elapsed="0.000000"/>
-</return>
-<msg time="2024-02-09T21:49:42.918025" level="INFO">${id} = 1488</msg>
-<var>${id}</var>
-<arg>${response}</arg>
-<status status="PASS" start="2024-02-09T21:49:42.907828" elapsed="0.010197"/>
-</kw>
-<kw name="GET /booking/${id}" owner="common" source_name="GET /booking/${id}">
-<kw name="GET" owner="RequestsLibrary">
-<msg time="2024-02-09T21:49:43.385204" level="INFO">GET Request : url=https://restful-booker.herokuapp.com/booking/1488 
- path_url=/booking/1488 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
- body=None 
- </msg>
-<msg time="2024-02-09T21:49:43.386075" level="INFO">GET Response : url=https://restful-booker.herokuapp.com/booking/1488 
- status=200, reason=OK 
- headers={'Server': 'Cowboy', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1707515383&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=jgApJN6g%2FNb9IYYZ5XgiMZ5MZhIHXp4pQ92l%2BrWVaGg%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1707515383&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=jgApJN6g%2FNb9IYYZ5XgiMZ5MZhIHXp4pQ92l%2BrWVaGg%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '171', 'Etag': 'W/"ab-MG4aCOdqq15ogV4Uqb+rfjZOkQk"', 'Date': 'Fri, 09 Feb 2024 21:49:43 GMT', 'Via': '1.1 vegur'} 
- body={"firstname":"Josh","lastname":"Allen","totalprice":111,"depositpaid":true,"bookingdates":{"checkin":"2018-01-01","checkout":"2019-01-01"},"additionalneeds":"super bowls"} 
- </msg>
-<msg time="2024-02-09T21:49:43.387074" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<var>${response}</var>
-<arg>url=${BASE_URL}/booking/${id}</arg>
-<doc>Sends a GET request.</doc>
-<status status="PASS" start="2024-02-09T21:49:42.920936" elapsed="0.467138"/>
-</kw>
-<return>
-<value>${response}</value>
-<status status="PASS" start="2024-02-09T21:49:43.388074" elapsed="0.001001"/>
-</return>
-<msg time="2024-02-09T21:49:43.390076" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<var>${response}</var>
-<status status="PASS" start="2024-02-09T21:49:42.919933" elapsed="0.470143"/>
+<status status="PASS" start="2024-02-11T17:17:46.991800" elapsed="0.609751"/>
 </kw>
 <kw name="Status Should Be" owner="RequestsLibrary">
 <arg>200</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" start="2024-02-09T21:49:43.402581" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-11T17:17:47.602560" elapsed="0.001092"/>
 </kw>
 <kw name="Validate Json" owner="common">
 <kw name="Validate Json By Schema File" owner="JSONLibrary">
@@ -86,27 +42,359 @@
 Arguments:
     - json_object: json as a dictionary object.
     - json_path: path to file with json schema</doc>
-<status status="PASS" start="2024-02-09T21:49:43.404578" elapsed="0.004997"/>
+<status status="PASS" start="2024-02-11T17:17:47.604657" elapsed="0.035607"/>
+</kw>
+<arg>${response}</arg>
+<arg>GetBooking.json</arg>
+<status status="PASS" start="2024-02-11T17:17:47.603652" elapsed="0.036612"/>
+</kw>
+<status status="PASS" start="2024-02-11T17:17:46.989798" elapsed="0.650466"/>
+</test>
+<test id="s1-s1-t2" name="TC 3: obter reserva por ID" line="11">
+<kw name="GET /booking" owner="common">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2024-02-11T17:17:48.183966" level="INFO">GET Request : url=https://restful-booker.herokuapp.com/booking 
+ path_url=/booking 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-02-11T17:17:48.183966" level="INFO">GET Response : url=https://restful-booker.herokuapp.com/booking 
+ status=200, reason=OK 
+ headers={'Server': 'Cowboy', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1707671861&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=t1Ty7UdSddwhpN52%2Bg0OLS6nY7xpii%2FdKpPm7VeGhEE%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1707671861&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=t1Ty7UdSddwhpN52%2Bg0OLS6nY7xpii%2FdKpPm7VeGhEE%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '36946', 'Etag': 'W/"9052-U9FbBPXGaA8Jrsej0Hp3hsgtukI"', 'Date': 'Sun, 11 Feb 2024 17:17:41 GMT', 'Via': '1.1 vegur'} 
+ body=[{"bookingid":2340},{"bookingid":1414},{"bookingid":2155},{"bookingid":1700},{"bookingid":2539},{"bookingid":1376},{"bookingid":1074},{"bookingid":1258},{"bookingid":1719},{"bookingid":1950},{"bookingid":1967},{"bookingid":2288},{"bookingid":1629},{"bookingid":510},{"bookingid":723},{"bookingid":127},{"bookingid":829},{"bookingid":1},{"bookingid":1940},{"bookingid":922},{"bookingid":677},{"bookingid":2883},{"bookingid":1549},{"bookingid":1936},{"bookingid":879},{"bookingid":2422},{"bookingid":1787},{"bookingid":2281},{"bookingid":1185},{"bookingid":2523},{"bookingid":2525},{"bookingid":676},{"bookingid":2375},{"bookingid":2417},{"bookingid":615},{"bookingid":1010},{"bookingid":2480},{"bookingid":431},{"bookingid":2233},{"bookingid":752},{"bookingid":292},{"bookingid":996},{"bookingid":650},{"bookingid":1605},{"bookingid":1061},{"bookingid":550},{"bookingid":907},{"bookingid":734},{"bookingid":341},{"bookingid":568},{"bookingid":2406},{"bookingid":265},{"bookingid":2779},{"bookingid":1208},{"bookingid":2632},{"bookingid":2240},{"bookingid":2696},{"bookingid":1533},{"bookingid":1737},{"bookingid":415},{"bookingid":1130},{"bookingid":1686},{"bookingid":2703},{"bookingid":235},{"bookingid":95},{"bookingid":352},{"bookingid":480},{"bookingid":284},{"bookingid":764},{"bookingid":159},{"bookingid":1699},{"bookingid":1672},{"bookingid":1809},{"bookingid":1087},{"bookingid":2212},{"bookingid":1198},{"bookingid":1553},{"bookingid":518},{"bookingid":306},{"bookingid":1721},{"bookingid":1503},{"bookingid":1902},{"bookingid":180},{"bookingid":798},{"bookingid":1200},{"bookingid":1847},{"bookingid":1132},{"bookingid":2254},{"bookingid":266},{"bookingid":833},{"bookingid":461},{"bookingid":2474},{"bookingid":100},{"bookingid":1228},{"bookingid":383},{"bookingid":1874},{"bookingid":2004},{"bookingid":493},{"bookingid":1268},{"bookingid":499},{"bookingid":2404},{"bookingid":386},{"bookingid":1912},{"bookingid":2323},{"bookingid":1102},{"bookingid":2055},{"bookingid":2181},{"bookingid":2048},{"bookingid":2228},{"bookingid":562},{"bookingid":740},{"bookingid":110},{"bookingid":952},{"bookingid":1506},{"bookingid":1757},{"bookingid":2690},{"bookingid":1126},{"bookingid":440},{"bookingid":464},{"bookingid":1347},{"bookingid":2122},{"bookingid":2560},{"bookingid":705},{"bookingid":2363},{"bookingid":2435},{"bookingid":2097},{"bookingid":735},{"bookingid":1635},{"bookingid":1165},{"bookingid":347},{"bookingid":1161},{"bookingid":747},{"bookingid":2771},{"bookingid":336},{"bookingid":2797},{"bookingid":2806},{"bookingid":406},{"bookingid":2280},{"bookingid":1543},{"bookingid":2307},{"bookingid":55},{"bookingid":766},{"bookingid":421},{"bookingid":812},{"bookingid":652},{"bookingid":128},{"bookingid":2672},{"bookingid":2565},{"bookingid":18},{"bookingid":2879},{"bookingid":2791},{"bookingid":150},{"bookingid":2482},{"bookingid":179},{"bookingid":1097},{"bookingid":2146},{"bookingid":388},{"bookingid":1584},{"bookingid":1137},{"bookingid":987},{"bookingid":1718},{"bookingid":1730},{"bookingid":2318},{"bookingid":2180},{"bookingid":287},{"bookingid":1495},{"bookingid":2535},{"bookingid":2524},{"bookingid":2821},{"bookingid":1195},{"bookingid":583},{"bookingid":1650},{"bookingid":1942},{"bookingid":1644},{"bookingid":1952},{"bookingid":1389},{"bookingid":2256},{"bookingid":444},{"bookingid":671},{"bookingid":1714},{"bookingid":1128},{"bookingid":945},{"bookingid":2613},{"bookingid":2803},{"bookingid":2095},{"bookingid":1171},{"bookingid":626},{"bookingid":1044},{"bookingid":2421},{"bookingid":1783},{"bookingid":1871},{"bookingid":417},{"bookingid":126},{"bookingid":2739},{"bookingid":2633},{"bookingid":2060},{"bookingid":531},{"bookingid":220},{"bookingid":400},{"bookingid":873},{"bookingid":5},{"bookingid":759},{"bookingid":511},{"bookingid":632},{"bookingid":1563},{"bookingid":1720},{"bookingid":2662},{"bookingid":791},{"bookingid":2321},{"bookingid":2005},{"bookingid":981},{"bookingid":515},{"bookingid":283},{"bookingid":2571},{"bookingid":1277},{"bookingid":1618},{"bookingid":2208},{"bookingid":171},{"bookingid":1249},{"bookingid":1695},{"bookingid":1761},{"bookingid":334},{"bookingid":1237},{"bookingid":2839},{"bookingid":1995},{"bookingid":1606},{"bookingid":1482},{"bookingid":836},{"bookingid":2191},{"bookingid":561},{"bookingid":2738},{"bookingid":1665},{"bookingid":1052},{"bookingid":299},{"bookingid":2387},{"bookingid":853},{"bookingid":685},{"bookingid":2502},{"bookingid":782},{"bookingid":2578},{"bookingid":679},{"bookingid":2881},{"bookingid":2782},{"bookingid":199},{"bookingid":2160},{"bookingid":577},{"bookingid":1692},{"bookingid":2178},{"bookingid":2330},{"bookingid":2648},{"bookingid":1018},{"bookingid":70},{"bookingid":640},{"bookingid":746},{"bookingid":402},{"bookingid":2721},{"bookingid":1945},{"bookingid":2342},{"bookingid":460},{"bookingid":704},{"bookingid":1612},{"bookingid":2142},{"bookingid":1101},{"bookingid":208},{"bookingid":2353},{"bookingid":2287},{"bookingid":521},{"bookingid":253},{"bookingid":1123},{"bookingid":589},{"bookingid":2098},{"bookingid":894},{"bookingid":1070},{"bookingid":778},{"bookingid":1708},{"bookingid":2311},{"bookingid":980},{"bookingid":226},{"bookingid":721},{"bookingid":719},{"bookingid":363},{"bookingid":639},{"bookingid":2755},{"bookingid":2120},{"bookingid":2876},{"bookingid":1813},{"bookingid":2677},{"bookingid":1890},{"bookingid":1619},{"bookingid":2718},{"bookingid":1199},{"bookingid":965},{"bookingid":1378},{"bookingid":1271},{"bookingid":1540},{"bookingid":2646},{"bookingid":1577},{"bookingid":919},{"bookingid":1219},{"bookingid":528},{"bookingid":684},{"bookingid":877},{"bookingid":1575},{"bookingid":250},{"bookingid":2381},{"bookingid":1406},{"bookingid":2210},{"bookingid":1465},{"bookingid":302},{"bookingid":1390},{"bookingid":2126},{"bookingid":2041},{"bookingid":2600},{"bookingid":1633},{"bookingid":1413},{"bookingid":124},{"bookingid":2306},{"bookingid":278},{"bookingid":114},{"bookingid":453},{"bookingid":1152},{"bookingid":2012},{"bookingid":2193},{"bookingid":1351},{"bookingid":186},{"bookingid":783},{"bookingid":841},{"bookingid":2766},{"bookingid":2809},{"bookingid":1590},{"bookingid":2528},{"bookingid":2826},{"bookingid":138},{"bookingid":192},{"bookingid":11},{"bookingid":1028},{"bookingid":1072},{"bookingid":2242},{"bookingid":1003},{"bookingid":580},{"bookingid":1265},{"bookingid":1781},{"bookingid":312},{"bookingid":934},{"bookingid":2197},{"bookingid":820},{"bookingid":2604},{"bookingid":335},{"bookingid":4},{"bookingid":730},{"bookingid":850},{"bookingid":1119},{"bookingid":1216},{"bookingid":223},{"bookingid":281},{"bookingid":957},{"bookingid":122},{"bookingid":898},{"bookingid":1556},{"bookingid":1486},{"bookingid":1085},{"bookingid":2762},{"bookingid":667},{"bookingid":28},{"bookingid":672},{"bookingid":54},{"bookingid":420},{"bookingid":1924},{"bookingid":2854},{"bookingid":2828},{"bookingid":1118},{"bookingid":1641},{"bookingid":1642},{"bookingid":728},{"bookingid":296},{"bookingid":2322},{"bookingid":247},{"bookingid":36},{"bookingid":753},{"bookingid":851},{"bookingid":1627},{"bookingid":1815},{"bookingid":861},{"bookingid":1396},{"bookingid":2863},{"bookingid":2665},{"bookingid":2701},{"bookingid":414},{"bookingid":85},{"bookingid":2389},{"bookingid":608},{"bookingid":83},{"bookingid":901},{"bookingid":1383},{"bookingid":2503},{"bookingid":1957},{"bookingid":2794},{"bookingid":603},{"bookingid":1278},{"bookingid":1416},{"bookingid":2301},{"bookingid":2046},{"bookingid":2058},{"bookingid":46},{"bookingid":2851},{"bookingid":1449},{"bookingid":2203},{"bookingid":2354},{"bookingid":1448},{"bookingid":537},{"bookingid":800},{"bookingid":1353},{"bookingid":89},{"bookingid":2039},{"bookingid":698},{"bookingid":1440},{"bookingid":167},{"bookingid":1609},{"bookingid":274},{"bookingid":178},{"bookingid":1895},{"bookingid":748},{"bookingid":2630},{"bookingid":2865},{"bookingid":399},{"bookingid":87},{"bookingid":737},{"bookingid":1937},{"bookingid":2400},{"bookingid":2868},{"bookingid":474},{"bookingid":1827},{"bookingid":84},{"bookingid":2774},{"bookingid":2776},{"bookingid":727},{"bookingid":165},{"bookingid":2685},{"bookingid":2531},{"bookingid":2189},{"bookingid":1478},{"bookingid":656},{"bookingid":2195},{"bookingid":1801},{"bookingid":260},{"bookingid":2890},{"bookingid":1086},{"bookingid":2517},{"bookingid":2204},{"bookingid":1040},{"bookingid":1771},{"bookingid":357},{"bookingid":1436},{"bookingid":1474},{"bookingid":903},{"bookingid":175},{"bookingid":2458},{"bookingid":1728},{"bookingid":547},{"bookingid":1851},{"bookingid":1667},{"bookingid":2572},{"bookingid":1824},{"bookingid":1207},{"bookingid":1814},{"bookingid":2383},{"bookingid":1869},{"bookingid":2802},{"bookingid":1614},{"bookingid":1470},{"bookingid":1645},{"bookingid":2216},{"bookingid":1296},{"bookingid":245},{"bookingid":1573},{"bookingid":1443},{"bookingid":1035},{"bookingid":564},{"bookingid":277},{"bookingid":1568},{"bookingid":1260},{"bookingid":215},{"bookingid":1822},{"bookingid":1670},{"bookingid":1906},{"bookingid":1380},{"bookingid":2253},{"bookingid":2557},{"bookingid":2760},{"bookingid":1998},{"bookingid":2469},{"bookingid":2401},{"bookingid":1986},{"bookingid":2830},{"bookingid":1961},{"bookingid":967},{"bookingid":2823},{"bookingid":2347},{"bookingid":2440},{"bookingid":63},{"bookingid":1856},{"bookingid":1897},{"bookingid":1671},{"bookingid":459},{"bookingid":756},{"bookingid":2154},{"bookingid":770},{"bookingid":690},{"bookingid":1092},{"bookingid":2594},{"bookingid":1330},{"bookingid":628},{"bookingid":546},{"bookingid":1372},{"bookingid":2702},{"bookingid":353},{"bookingid":532},{"bookingid":1502},{"bookingid":1280},{"bookingid":1182},{"bookingid":2573},{"bookingid":1479},{"bookingid":1363},{"bookingid":305},{"bookingid":1023},{"bookingid":1848},{"bookingid":349},{"bookingid":270},{"bookingid":331},{"bookingid":1445},{"bookingid":1659},{"bookingid":1647},{"bookingid":2551},{"bookingid":862},{"bookingid":1887},{"bookingid":1790},{"bookingid":805},{"bookingid":1366},{... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg time="2024-02-11T17:17:48.183966" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>url=${BASE_URL}/booking</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2024-02-11T17:17:47.643692" elapsed="0.541274"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2024-02-11T17:17:48.184966" elapsed="0.000000"/>
+</return>
+<msg time="2024-02-11T17:17:48.185971" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<status status="PASS" start="2024-02-11T17:17:47.643692" elapsed="0.542279"/>
+</kw>
+<kw name="Select Random BookingId From Json" owner="common">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-02-11T17:17:48.189075" level="INFO">${bookingid} = 2312</msg>
+<var>${bookingid}</var>
+<arg>random.choice($response.json())['bookingid']</arg>
+<arg>modules=random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-02-11T17:17:48.188075" elapsed="0.001999"/>
+</kw>
+<return>
+<value>${bookingid}</value>
+<status status="PASS" start="2024-02-11T17:17:48.190074" elapsed="0.000000"/>
+</return>
+<msg time="2024-02-11T17:17:48.190074" level="INFO">${id} = 2312</msg>
+<var>${id}</var>
+<arg>${response}</arg>
+<status status="PASS" start="2024-02-11T17:17:48.187069" elapsed="0.003005"/>
+</kw>
+<kw name="GET /booking/${id}" owner="common" source_name="GET /booking/${id}">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2024-02-11T17:17:48.617276" level="INFO">GET Request : url=https://restful-booker.herokuapp.com/booking/2312 
+ path_url=/booking/2312 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-02-11T17:17:48.617276" level="INFO">GET Response : url=https://restful-booker.herokuapp.com/booking/2312 
+ status=200, reason=OK 
+ headers={'Server': 'Cowboy', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1707671862&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=DKGVqSskCOL0zO6xV6hT5U%2BaL8%2FaqMSZDNpdAsxraLM%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1707671862&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=DKGVqSskCOL0zO6xV6hT5U%2BaL8%2FaqMSZDNpdAsxraLM%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '171', 'Etag': 'W/"ab-MG4aCOdqq15ogV4Uqb+rfjZOkQk"', 'Date': 'Sun, 11 Feb 2024 17:17:42 GMT', 'Via': '1.1 vegur'} 
+ body={"firstname":"Josh","lastname":"Allen","totalprice":111,"depositpaid":true,"bookingdates":{"checkin":"2018-01-01","checkout":"2019-01-01"},"additionalneeds":"super bowls"} 
+ </msg>
+<msg time="2024-02-11T17:17:48.618274" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>url=${BASE_URL}/booking/${id}</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2024-02-11T17:17:48.192075" elapsed="0.426199"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2024-02-11T17:17:48.618274" elapsed="0.001001"/>
+</return>
+<msg time="2024-02-11T17:17:48.619275" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<status status="PASS" start="2024-02-11T17:17:48.191078" elapsed="0.428197"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2024-02-11T17:17:48.620533" elapsed="0.000000"/>
+</kw>
+<kw name="Validate Json" owner="common">
+<kw name="Validate Json By Schema File" owner="JSONLibrary">
+<arg>${response.json()}</arg>
+<arg>${CONTRACT_DIR}${/}${filename}</arg>
+<doc>Validate json object by json schema file.
+Arguments:
+    - json_object: json as a dictionary object.
+    - json_path: path to file with json schema</doc>
+<status status="PASS" start="2024-02-11T17:17:48.621847" elapsed="0.001011"/>
 </kw>
 <arg>${response}</arg>
 <arg>GetBookingIds.json</arg>
-<status status="PASS" start="2024-02-09T21:49:43.402581" elapsed="0.007996"/>
+<status status="PASS" start="2024-02-11T17:17:48.621847" elapsed="0.001011"/>
 </kw>
-<status status="PASS" start="2024-02-09T21:49:42.176829" elapsed="1.233748"/>
+<status status="PASS" start="2024-02-11T17:17:47.641262" elapsed="0.982595"/>
 </test>
-<status status="PASS" start="2024-02-09T21:49:41.969304" elapsed="1.443270"/>
+<test id="s1-s1-t3" name="TC 4: substituir reserva" line="22">
+<kw name="Wrapper POST /auth" owner="common" type="SETUP">
+<kw name="POST /auth" owner="common">
+<kw name="Load Json From File" owner="JSONLibrary">
+<msg time="2024-02-11T17:17:48.626854" level="INFO">${body} = {'username': 'admin', 'password': 'password123'}</msg>
+<var>${body}</var>
+<arg>${PAYLOAD_DIR}${/}${filename}</arg>
+<doc>Load JSON from file.</doc>
+<status status="PASS" start="2024-02-11T17:17:48.626854" elapsed="0.001000"/>
+</kw>
+<kw name="POST" owner="RequestsLibrary">
+<msg time="2024-02-11T17:17:49.118152" level="INFO">POST Request : url=https://restful-booker.herokuapp.com/auth 
+ path_url=/auth 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '48', 'Content-Type': 'application/json'} 
+ body=b'{"username": "admin", "password": "password123"}' 
+ </msg>
+<msg time="2024-02-11T17:17:49.119539" level="INFO">POST Response : url=https://restful-booker.herokuapp.com/auth 
+ status=200, reason=OK 
+ headers={'Server': 'Cowboy', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1707671862&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=DKGVqSskCOL0zO6xV6hT5U%2BaL8%2FaqMSZDNpdAsxraLM%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1707671862&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=DKGVqSskCOL0zO6xV6hT5U%2BaL8%2FaqMSZDNpdAsxraLM%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '27', 'Etag': 'W/"1b-UuWhRZayV0ibQuUzusiuywvg220"', 'Date': 'Sun, 11 Feb 2024 17:17:42 GMT', 'Via': '1.1 vegur'} 
+ body={"token":"c935346e792b7ff"} 
+ </msg>
+<msg time="2024-02-11T17:17:49.120550" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>url=${BASE_URL}/auth</arg>
+<arg>json=${body}</arg>
+<doc>Sends a POST request.</doc>
+<status status="PASS" start="2024-02-11T17:17:48.627854" elapsed="0.492696"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2024-02-11T17:17:49.120550" elapsed="0.000000"/>
+</return>
+<msg time="2024-02-11T17:17:49.121711" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>PostAuthValid.json</arg>
+<status status="PASS" start="2024-02-11T17:17:48.625853" elapsed="0.495858"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-02-11T17:17:49.122720" level="INFO">${TOKEN} = c935346e792b7ff</msg>
+<var>${TOKEN}</var>
+<arg>${response.json()}[token]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-02-11T17:17:49.121711" elapsed="0.001009"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-02-11T17:17:49.123928" level="INFO">${TOKEN} = c935346e792b7ff</msg>
+<arg>${TOKEN}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-02-11T17:17:49.122720" elapsed="0.001208"/>
+</kw>
+<status status="PASS" start="2024-02-11T17:17:48.625853" elapsed="0.498075"/>
+</kw>
+<kw name="POST /auth" owner="common">
+<kw name="Load Json From File" owner="JSONLibrary">
+<msg time="2024-02-11T17:17:49.125935" level="INFO">${body} = {'username': 'admin', 'password': 'password123'}</msg>
+<var>${body}</var>
+<arg>${PAYLOAD_DIR}${/}${filename}</arg>
+<doc>Load JSON from file.</doc>
+<status status="PASS" start="2024-02-11T17:17:49.124935" elapsed="0.001000"/>
+</kw>
+<kw name="POST" owner="RequestsLibrary">
+<msg time="2024-02-11T17:17:49.560335" level="INFO">POST Request : url=https://restful-booker.herokuapp.com/auth 
+ path_url=/auth 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '48', 'Content-Type': 'application/json'} 
+ body=b'{"username": "admin", "password": "password123"}' 
+ </msg>
+<msg time="2024-02-11T17:17:49.561336" level="INFO">POST Response : url=https://restful-booker.herokuapp.com/auth 
+ status=200, reason=OK 
+ headers={'Server': 'Cowboy', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1707671863&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=ctW0nsACh49jS7moNmCcl33isFBgN5qbve98D6VU7Gc%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1707671863&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=ctW0nsACh49jS7moNmCcl33isFBgN5qbve98D6VU7Gc%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '27', 'Etag': 'W/"1b-o+1BW6RQLvPFqM4XsN90DoNgk3c"', 'Date': 'Sun, 11 Feb 2024 17:17:43 GMT', 'Via': '1.1 vegur'} 
+ body={"token":"da831cab6f59215"} 
+ </msg>
+<msg time="2024-02-11T17:17:49.563233" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>url=${BASE_URL}/auth</arg>
+<arg>json=${body}</arg>
+<doc>Sends a POST request.</doc>
+<status status="PASS" start="2024-02-11T17:17:49.126936" elapsed="0.437636"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2024-02-11T17:17:49.564572" elapsed="0.001009"/>
+</return>
+<msg time="2024-02-11T17:17:49.565581" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>PostAuthValid.json</arg>
+<status status="PASS" start="2024-02-11T17:17:49.124935" elapsed="0.440646"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-02-11T17:17:49.567991" level="INFO">${token} = da831cab6f59215</msg>
+<var>${token}</var>
+<arg>${response.json()}[token]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-02-11T17:17:49.566980" elapsed="0.002442"/>
+</kw>
+<kw name="GET /booking" owner="common">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2024-02-11T17:17:50.151751" level="INFO">GET Request : url=https://restful-booker.herokuapp.com/booking 
+ path_url=/booking 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-02-11T17:17:50.151751" level="INFO">GET Response : url=https://restful-booker.herokuapp.com/booking 
+ status=200, reason=OK 
+ headers={'Server': 'Cowboy', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1707671863&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=ctW0nsACh49jS7moNmCcl33isFBgN5qbve98D6VU7Gc%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1707671863&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=ctW0nsACh49jS7moNmCcl33isFBgN5qbve98D6VU7Gc%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '37098', 'Etag': 'W/"90ea-VVmmPLNi+l5RTUFRBYhAXYZS4oc"', 'Date': 'Sun, 11 Feb 2024 17:17:43 GMT', 'Via': '1.1 vegur'} 
+ body=[{"bookingid":2340},{"bookingid":1414},{"bookingid":2155},{"bookingid":1700},{"bookingid":2539},{"bookingid":1376},{"bookingid":1074},{"bookingid":1258},{"bookingid":1719},{"bookingid":1950},{"bookingid":1967},{"bookingid":2288},{"bookingid":2905},{"bookingid":1629},{"bookingid":510},{"bookingid":723},{"bookingid":127},{"bookingid":829},{"bookingid":1},{"bookingid":1940},{"bookingid":922},{"bookingid":677},{"bookingid":2883},{"bookingid":1549},{"bookingid":1936},{"bookingid":879},{"bookingid":2422},{"bookingid":1787},{"bookingid":2281},{"bookingid":1185},{"bookingid":2523},{"bookingid":2525},{"bookingid":676},{"bookingid":2375},{"bookingid":2417},{"bookingid":615},{"bookingid":1010},{"bookingid":2480},{"bookingid":431},{"bookingid":2233},{"bookingid":752},{"bookingid":292},{"bookingid":996},{"bookingid":650},{"bookingid":1605},{"bookingid":1061},{"bookingid":550},{"bookingid":907},{"bookingid":734},{"bookingid":341},{"bookingid":2897},{"bookingid":568},{"bookingid":2406},{"bookingid":265},{"bookingid":2779},{"bookingid":1208},{"bookingid":2632},{"bookingid":2240},{"bookingid":2696},{"bookingid":1533},{"bookingid":1737},{"bookingid":415},{"bookingid":1130},{"bookingid":1686},{"bookingid":2703},{"bookingid":235},{"bookingid":95},{"bookingid":352},{"bookingid":480},{"bookingid":284},{"bookingid":764},{"bookingid":159},{"bookingid":1699},{"bookingid":1672},{"bookingid":1809},{"bookingid":1087},{"bookingid":2212},{"bookingid":1198},{"bookingid":1553},{"bookingid":518},{"bookingid":306},{"bookingid":1721},{"bookingid":1503},{"bookingid":1902},{"bookingid":180},{"bookingid":798},{"bookingid":1200},{"bookingid":1847},{"bookingid":1132},{"bookingid":2254},{"bookingid":266},{"bookingid":833},{"bookingid":461},{"bookingid":2474},{"bookingid":100},{"bookingid":1228},{"bookingid":383},{"bookingid":1874},{"bookingid":2004},{"bookingid":493},{"bookingid":1268},{"bookingid":499},{"bookingid":2404},{"bookingid":386},{"bookingid":1912},{"bookingid":2323},{"bookingid":1102},{"bookingid":2055},{"bookingid":2181},{"bookingid":2048},{"bookingid":2228},{"bookingid":562},{"bookingid":740},{"bookingid":110},{"bookingid":952},{"bookingid":1506},{"bookingid":1757},{"bookingid":2690},{"bookingid":1126},{"bookingid":440},{"bookingid":464},{"bookingid":1347},{"bookingid":2122},{"bookingid":2560},{"bookingid":705},{"bookingid":2363},{"bookingid":2435},{"bookingid":2097},{"bookingid":735},{"bookingid":1635},{"bookingid":1165},{"bookingid":347},{"bookingid":1161},{"bookingid":747},{"bookingid":2771},{"bookingid":336},{"bookingid":2797},{"bookingid":2806},{"bookingid":406},{"bookingid":2280},{"bookingid":1543},{"bookingid":2307},{"bookingid":55},{"bookingid":766},{"bookingid":421},{"bookingid":812},{"bookingid":652},{"bookingid":128},{"bookingid":2672},{"bookingid":2565},{"bookingid":18},{"bookingid":2879},{"bookingid":2791},{"bookingid":150},{"bookingid":2482},{"bookingid":179},{"bookingid":1097},{"bookingid":2146},{"bookingid":388},{"bookingid":1584},{"bookingid":1137},{"bookingid":987},{"bookingid":1718},{"bookingid":1730},{"bookingid":2318},{"bookingid":2180},{"bookingid":287},{"bookingid":1495},{"bookingid":2535},{"bookingid":2524},{"bookingid":2821},{"bookingid":1195},{"bookingid":583},{"bookingid":1650},{"bookingid":1942},{"bookingid":1644},{"bookingid":1952},{"bookingid":1389},{"bookingid":2256},{"bookingid":444},{"bookingid":671},{"bookingid":1714},{"bookingid":1128},{"bookingid":945},{"bookingid":2613},{"bookingid":2803},{"bookingid":2095},{"bookingid":1171},{"bookingid":626},{"bookingid":1044},{"bookingid":2421},{"bookingid":1783},{"bookingid":1871},{"bookingid":417},{"bookingid":126},{"bookingid":2739},{"bookingid":2633},{"bookingid":2060},{"bookingid":531},{"bookingid":220},{"bookingid":400},{"bookingid":873},{"bookingid":5},{"bookingid":759},{"bookingid":511},{"bookingid":632},{"bookingid":1563},{"bookingid":1720},{"bookingid":2662},{"bookingid":791},{"bookingid":2321},{"bookingid":2005},{"bookingid":981},{"bookingid":515},{"bookingid":283},{"bookingid":2571},{"bookingid":1277},{"bookingid":1618},{"bookingid":2208},{"bookingid":171},{"bookingid":1249},{"bookingid":1695},{"bookingid":1761},{"bookingid":334},{"bookingid":1237},{"bookingid":2839},{"bookingid":1995},{"bookingid":1606},{"bookingid":1482},{"bookingid":836},{"bookingid":2191},{"bookingid":561},{"bookingid":2738},{"bookingid":1665},{"bookingid":1052},{"bookingid":299},{"bookingid":2387},{"bookingid":853},{"bookingid":685},{"bookingid":2502},{"bookingid":782},{"bookingid":2578},{"bookingid":679},{"bookingid":2881},{"bookingid":2782},{"bookingid":199},{"bookingid":2160},{"bookingid":577},{"bookingid":1692},{"bookingid":2178},{"bookingid":2330},{"bookingid":2648},{"bookingid":1018},{"bookingid":70},{"bookingid":640},{"bookingid":746},{"bookingid":402},{"bookingid":2721},{"bookingid":1945},{"bookingid":2342},{"bookingid":460},{"bookingid":704},{"bookingid":1612},{"bookingid":2142},{"bookingid":1101},{"bookingid":208},{"bookingid":2353},{"bookingid":2287},{"bookingid":521},{"bookingid":253},{"bookingid":1123},{"bookingid":589},{"bookingid":2098},{"bookingid":894},{"bookingid":1070},{"bookingid":778},{"bookingid":1708},{"bookingid":2311},{"bookingid":980},{"bookingid":226},{"bookingid":721},{"bookingid":719},{"bookingid":363},{"bookingid":639},{"bookingid":2755},{"bookingid":2120},{"bookingid":2876},{"bookingid":1813},{"bookingid":2677},{"bookingid":1890},{"bookingid":1619},{"bookingid":2718},{"bookingid":1199},{"bookingid":965},{"bookingid":1378},{"bookingid":1271},{"bookingid":1540},{"bookingid":2646},{"bookingid":1577},{"bookingid":919},{"bookingid":1219},{"bookingid":528},{"bookingid":684},{"bookingid":877},{"bookingid":1575},{"bookingid":250},{"bookingid":2381},{"bookingid":1406},{"bookingid":2210},{"bookingid":1465},{"bookingid":302},{"bookingid":1390},{"bookingid":2126},{"bookingid":2041},{"bookingid":2600},{"bookingid":1633},{"bookingid":1413},{"bookingid":124},{"bookingid":2306},{"bookingid":278},{"bookingid":114},{"bookingid":453},{"bookingid":1152},{"bookingid":2012},{"bookingid":2193},{"bookingid":1351},{"bookingid":186},{"bookingid":783},{"bookingid":841},{"bookingid":2766},{"bookingid":2809},{"bookingid":1590},{"bookingid":2528},{"bookingid":2826},{"bookingid":138},{"bookingid":192},{"bookingid":11},{"bookingid":1028},{"bookingid":1072},{"bookingid":2242},{"bookingid":1003},{"bookingid":580},{"bookingid":1265},{"bookingid":1781},{"bookingid":312},{"bookingid":934},{"bookingid":2197},{"bookingid":820},{"bookingid":2604},{"bookingid":335},{"bookingid":4},{"bookingid":730},{"bookingid":850},{"bookingid":1119},{"bookingid":1216},{"bookingid":223},{"bookingid":281},{"bookingid":957},{"bookingid":122},{"bookingid":898},{"bookingid":1556},{"bookingid":1486},{"bookingid":1085},{"bookingid":2762},{"bookingid":667},{"bookingid":28},{"bookingid":672},{"bookingid":54},{"bookingid":420},{"bookingid":1924},{"bookingid":2854},{"bookingid":2828},{"bookingid":1118},{"bookingid":1641},{"bookingid":1642},{"bookingid":728},{"bookingid":296},{"bookingid":2322},{"bookingid":247},{"bookingid":36},{"bookingid":753},{"bookingid":851},{"bookingid":1627},{"bookingid":1815},{"bookingid":861},{"bookingid":1396},{"bookingid":2863},{"bookingid":2665},{"bookingid":2701},{"bookingid":414},{"bookingid":85},{"bookingid":2389},{"bookingid":608},{"bookingid":83},{"bookingid":901},{"bookingid":1383},{"bookingid":2503},{"bookingid":1957},{"bookingid":2794},{"bookingid":603},{"bookingid":1278},{"bookingid":1416},{"bookingid":2301},{"bookingid":2046},{"bookingid":2058},{"bookingid":46},{"bookingid":2851},{"bookingid":1449},{"bookingid":2203},{"bookingid":2354},{"bookingid":1448},{"bookingid":537},{"bookingid":800},{"bookingid":1353},{"bookingid":89},{"bookingid":2039},{"bookingid":698},{"bookingid":1440},{"bookingid":167},{"bookingid":1609},{"bookingid":274},{"bookingid":178},{"bookingid":1895},{"bookingid":748},{"bookingid":2630},{"bookingid":2865},{"bookingid":399},{"bookingid":87},{"bookingid":737},{"bookingid":1937},{"bookingid":2400},{"bookingid":2868},{"bookingid":474},{"bookingid":1827},{"bookingid":84},{"bookingid":2774},{"bookingid":2776},{"bookingid":727},{"bookingid":165},{"bookingid":2685},{"bookingid":2531},{"bookingid":2189},{"bookingid":1478},{"bookingid":656},{"bookingid":2195},{"bookingid":1801},{"bookingid":260},{"bookingid":2890},{"bookingid":1086},{"bookingid":2517},{"bookingid":2204},{"bookingid":1040},{"bookingid":1771},{"bookingid":357},{"bookingid":1436},{"bookingid":1474},{"bookingid":903},{"bookingid":175},{"bookingid":2458},{"bookingid":1728},{"bookingid":547},{"bookingid":1851},{"bookingid":1667},{"bookingid":2572},{"bookingid":1824},{"bookingid":1207},{"bookingid":1814},{"bookingid":2383},{"bookingid":1869},{"bookingid":2802},{"bookingid":1614},{"bookingid":1470},{"bookingid":1645},{"bookingid":2216},{"bookingid":1296},{"bookingid":245},{"bookingid":1573},{"bookingid":1443},{"bookingid":1035},{"bookingid":564},{"bookingid":277},{"bookingid":1568},{"bookingid":1260},{"bookingid":215},{"bookingid":1822},{"bookingid":1670},{"bookingid":1906},{"bookingid":1380},{"bookingid":2253},{"bookingid":2557},{"bookingid":2760},{"bookingid":1998},{"bookingid":2469},{"bookingid":2401},{"bookingid":1986},{"bookingid":2830},{"bookingid":1961},{"bookingid":967},{"bookingid":2823},{"bookingid":2347},{"bookingid":2440},{"bookingid":63},{"bookingid":1856},{"bookingid":1897},{"bookingid":1671},{"bookingid":459},{"bookingid":756},{"bookingid":2154},{"bookingid":770},{"bookingid":690},{"bookingid":1092},{"bookingid":2594},{"bookingid":1330},{"bookingid":628},{"bookingid":546},{"bookingid":1372},{"bookingid":2702},{"bookingid":353},{"bookingid":532},{"bookingid":1502},{"bookingid":1280},{"bookingid":1182},{"bookingid":2573},{"bookingid":1479},{"bookingid":1363},{"bookingid":305},{"bookingid":1023},{"bookingid":1848},{"bookingid":349},{"bookingid":270},{"bookingid":331},{"bookingid":1445},{"bookingid":1659},{"bookingid":1647},{"bookingid":2551},{"bookingid":862},{"bookingid":1887},{"bookingid":1790},... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg time="2024-02-11T17:17:50.152758" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>url=${BASE_URL}/booking</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2024-02-11T17:17:49.571434" elapsed="0.581324"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2024-02-11T17:17:50.154211" elapsed="0.000000"/>
+</return>
+<msg time="2024-02-11T17:17:50.154211" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<status status="PASS" start="2024-02-11T17:17:49.570432" elapsed="0.583779"/>
+</kw>
+<kw name="Select Random BookingId From Json" owner="common">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-02-11T17:17:50.157511" level="INFO">${bookingid} = 1869</msg>
+<var>${bookingid}</var>
+<arg>random.choice($response.json())['bookingid']</arg>
+<arg>modules=random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-02-11T17:17:50.155504" elapsed="0.002007"/>
+</kw>
+<return>
+<value>${bookingid}</value>
+<status status="PASS" start="2024-02-11T17:17:50.157511" elapsed="0.001000"/>
+</return>
+<msg time="2024-02-11T17:17:50.158511" level="INFO">${id} = 1869</msg>
+<var>${id}</var>
+<arg>${response}</arg>
+<status status="PASS" start="2024-02-11T17:17:50.155504" elapsed="0.003007"/>
+</kw>
+<kw name="PUT /booking/${id}" owner="common" source_name="PUT /booking/${id}">
+<kw name="Load Json From File" owner="JSONLibrary">
+<msg time="2024-02-11T17:17:50.160515" level="INFO">${body} = {'firstname': 'Fulano', 'lastname': 'Testando', 'totalprice': 1, 'depositpaid': False, 'bookingdates': {'checkin': '2024-02-08', 'checkout': '2024-02-09'}, 'additionalneeds': 'Nada'}</msg>
+<var>${body}</var>
+<arg>${PAYLOAD_DIR}${/}${filename}</arg>
+<doc>Load JSON from file.</doc>
+<status status="PASS" start="2024-02-11T17:17:50.159510" elapsed="0.001005"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-02-11T17:17:50.161514" level="INFO">${headers} = {'Cookie': 'token=c935346e792b7ff'}</msg>
+<var>${headers}</var>
+<arg>Cookie=token\=${TOKEN}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-02-11T17:17:50.161514" elapsed="0.000000"/>
+</kw>
+<kw name="PUT" owner="RequestsLibrary">
+<msg time="2024-02-11T17:17:50.593603" level="INFO">PUT Request : url=https://restful-booker.herokuapp.com/booking/1869 
+ path_url=/booking/1869 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Cookie': 'token=c935346e792b7ff', 'Content-Length': '182', 'Content-Type': 'application/json'} 
+ body=b'{"firstname": "Fulano", "lastname": "Testando", "totalprice": 1, "depositpaid": false, "bookingdates": {"checkin": "2024-02-08", "checkout": "2024-02-09"}, "additionalneeds": "Nada"}' 
+ </msg>
+<msg time="2024-02-11T17:17:50.593603" level="INFO">PUT Response : url=https://restful-booker.herokuapp.com/booking/1869 
+ status=200, reason=OK 
+ headers={'Server': 'Cowboy', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1707671864&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=csg8Q5vjEnajtCBwAVXvyY%2BnbuN2mYUg%2FCC7EshZ5%2BA%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1707671864&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=csg8Q5vjEnajtCBwAVXvyY%2BnbuN2mYUg%2FCC7EshZ5%2BA%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '168', 'Etag': 'W/"a8-qcPzmjrVCrhmtkrCzs0G73wvp1U"', 'Date': 'Sun, 11 Feb 2024 17:17:44 GMT', 'Via': '1.1 vegur'} 
+ body={"firstname":"Fulano","lastname":"Testando","totalprice":1,"depositpaid":false,"bookingdates":{"checkin":"2024-02-08","checkout":"2024-02-09"},"additionalneeds":"Nada"} 
+ </msg>
+<msg time="2024-02-11T17:17:50.593603" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>url=${BASE_URL}/booking/${id}</arg>
+<arg>json=${body}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a PUT request.</doc>
+<status status="PASS" start="2024-02-11T17:17:50.161514" elapsed="0.432089"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2024-02-11T17:17:50.594604" elapsed="0.000000"/>
+</return>
+<msg time="2024-02-11T17:17:50.594604" level="INFO">${newResponse} = &lt;Response [200]&gt;</msg>
+<var>${newResponse}</var>
+<arg>PutBooking.json</arg>
+<status status="PASS" start="2024-02-11T17:17:50.159510" elapsed="0.435094"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2024-02-11T17:17:50.595604" elapsed="0.000000"/>
+</kw>
+<kw name="Validate Json" owner="common">
+<kw name="Validate Json By Schema File" owner="JSONLibrary">
+<arg>${response.json()}</arg>
+<arg>${CONTRACT_DIR}${/}${filename}</arg>
+<doc>Validate json object by json schema file.
+Arguments:
+    - json_object: json as a dictionary object.
+    - json_path: path to file with json schema</doc>
+<status status="PASS" start="2024-02-11T17:17:50.597605" elapsed="0.002000"/>
+</kw>
+<arg>${newResponse}</arg>
+<arg>UpdateBooking.json</arg>
+<status status="PASS" start="2024-02-11T17:17:50.596605" elapsed="0.003000"/>
+</kw>
+<kw name="GET /booking/${id}" owner="common" source_name="GET /booking/${id}">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2024-02-11T17:17:51.035276" level="INFO">GET Request : url=https://restful-booker.herokuapp.com/booking/1869 
+ path_url=/booking/1869 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-02-11T17:17:51.036276" level="INFO">GET Response : url=https://restful-booker.herokuapp.com/booking/1869 
+ status=200, reason=OK 
+ headers={'Server': 'Cowboy', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1707671864&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=csg8Q5vjEnajtCBwAVXvyY%2BnbuN2mYUg%2FCC7EshZ5%2BA%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1707671864&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=csg8Q5vjEnajtCBwAVXvyY%2BnbuN2mYUg%2FCC7EshZ5%2BA%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '168', 'Etag': 'W/"a8-qcPzmjrVCrhmtkrCzs0G73wvp1U"', 'Date': 'Sun, 11 Feb 2024 17:17:44 GMT', 'Via': '1.1 vegur'} 
+ body={"firstname":"Fulano","lastname":"Testando","totalprice":1,"depositpaid":false,"bookingdates":{"checkin":"2024-02-08","checkout":"2024-02-09"},"additionalneeds":"Nada"} 
+ </msg>
+<msg time="2024-02-11T17:17:51.036276" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>url=${BASE_URL}/booking/${id}</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2024-02-11T17:17:50.600604" elapsed="0.435672"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2024-02-11T17:17:51.037276" elapsed="0.000000"/>
+</return>
+<msg time="2024-02-11T17:17:51.037276" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<status status="PASS" start="2024-02-11T17:17:50.599605" elapsed="0.437671"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2024-02-11T17:17:51.038670" elapsed="0.000000"/>
+</kw>
+<kw name="Dictionaries Should Be Equal" owner="Collections">
+<msg time="2024-02-11T17:17:51.040679" level="INFO">False</msg>
+<arg>${response.json()}</arg>
+<arg>${newResponse.json()}</arg>
+<doc>Fails if the given dictionaries are not equal.</doc>
+<status status="PASS" start="2024-02-11T17:17:51.039678" elapsed="0.001001"/>
+</kw>
+<status status="PASS" start="2024-02-11T17:17:48.624852" elapsed="2.416863"/>
+</test>
+<status status="PASS" start="2024-02-11T17:17:46.759020" elapsed="4.284050"/>
 </suite>
-<status status="PASS" start="2024-02-09T21:49:41.942954" elapsed="1.474301"/>
+<status status="PASS" start="2024-02-11T17:17:46.726221" elapsed="4.318328"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="AutomatizaTestesAPI">AutomatizaTestesAPI</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Booking">AutomatizaTestesAPI.Booking</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="AutomatizaTestesAPI">AutomatizaTestesAPI</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1" name="Booking">AutomatizaTestesAPI.Booking</stat>
 </suite>
 </statistics>
 <errors>
