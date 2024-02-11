@@ -61,7 +61,7 @@ TC6: editar reserva
     ${id}     Select Random BookingId From Json     ${response}
     #pegar o corpo daquele id
     ${response}     GET /booking/${id}
-    #cria corpo com DepositId alterado
+    #cria corpo com DepositPaid alterado
     ${body}    Change DepositPaid    ${response}    
     #alterar com o PATCH
     PATCH /booking/${id}    ${body}
