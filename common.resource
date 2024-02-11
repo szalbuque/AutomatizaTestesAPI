@@ -32,7 +32,13 @@ GET /booking
     RETURN    ${response}
 
 GET /booking/${id}
-    ${response}    GET      url=${BASE_URL}/booking/${id}
+    # para ignorar o erro 404 quando for um teste de delete
+    [Arguments]     ${ignore404}=${false}
+    IF  ${ignore404}
+        ${response}    Run Keyword And Expect Error    HTTPError:404*    GET    url=${BASE_URL}/booking/${id}
+    ELSE
+        ${response}    GET      url=${BASE_URL}/booking/${id}
+    END
     RETURN    ${response}
 
 POST /booking
@@ -57,6 +63,11 @@ PATCH /booking/${id}
     ${headers}    Create Dictionary    Cookie=token\=${TOKEN}
     # faz o PUT usando o id passado como parâmetro e o body que estava no arquivo
     ${response}    PATCH    url=${BASE_URL}/booking/${id}    json=${body}    headers=${headers}
+    RETURN    ${response}
+
+DELETE /booking/${id}
+    ${headers}    Create Dictionary    Cookie=token\=${TOKEN}
+    ${response}    DELETE    url=${BASE_URL}/booking/${id}    headers=${headers}
     RETURN    ${response}
 
 Select Random BookingId From Json

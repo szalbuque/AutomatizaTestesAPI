@@ -72,3 +72,21 @@ TC6: editar reserva
     ${response}     GET /booking/${id}
     Status Should Be    200
     Dictionary Should Contain Sub Dictionary    ${response.json()}    ${body}
+
+TC7: deletar reserva
+    #autenticação
+    [Setup]   Wrapper POST /auth
+    #pegar id ao acaso
+    ${response}    GET /booking
+    ${id}     Select Random BookingId From Json     ${response}
+    #deletar
+    ${response}     DELETE /booking/${id}
+    #documentação não mostra o status code esperado
+    #Status Should Be    201
+    #verificar com GET
+    #${response}    GET /booking/${id}    ignore404=${True}
+    #Status Should Be    404
+    #outra forma de verificar
+    #pegar todas as reservas e checar se o id deletado está lá
+    ${response}    GET /booking
+    Should Not Have Value In Json    ${response.json()}    json_path=$[?@.bookingid == ${id})].bookingid
