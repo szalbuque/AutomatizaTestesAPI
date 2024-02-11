@@ -35,6 +35,12 @@ GET /booking/${id}
     ${response}    GET      url=${BASE_URL}/booking/${id}
     RETURN    ${response}
 
+POST /booking
+    [Arguments]    ${filename}
+    ${body}    Load Json From File    ${PAYLOAD_DIR}${/}${filename}
+    ${response}    POST    url=${BASE_URL}/booking    json=${body}
+    RETURN    ${response}
+
 PUT /booking/${id}
     [Arguments]    ${filename}
     # pega o body de um arquivo que foi preparado anteriormente

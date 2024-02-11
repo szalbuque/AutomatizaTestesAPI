@@ -39,3 +39,16 @@ TC 4: substituir reserva
     Status Should Be    200
     Dictionaries Should Be Equal    ${response.json()}    ${newResponse.json()}
     
+TC5: criar reserva
+    # realizar o post usando o conteúdo do arquivo PostBooking.json
+    ${response}    POST /booking    PostBooking.json
+    # verificar status code
+    Status Should Be    200
+    # verificar contrato
+    Validate Json    ${response}    CreateBooking.json
+    # verificar persistência
+    ${id}    Set Variable    ${response.json()}[bookingid]
+    ${booking}    Set Variable    ${response.json()}[booking]
+    ${response}    GET /booking/${id}
+    Status Should Be    200
+    Dictionaries Should Be Equal    ${booking}    ${response.json()}
