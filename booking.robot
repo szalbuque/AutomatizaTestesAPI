@@ -59,9 +59,16 @@ TC6: editar reserva
     #pegar id ao acaso
     ${response}    GET /booking
     ${id}     Select Random BookingId From Json     ${response}
-
     #pegar o corpo daquele id
-    ${response}     GET /booking/id
-    #copiar o token
+    ${response}     GET /booking/${id}
+    #cria corpo com DepositId alterado
+    ${body}    Change DepositPaid    ${response}    
     #alterar com o PATCH
+    PATCH /booking/${id}    ${body}
     #validar status code e contrato
+    Status Should Be    200
+    Validate Json   ${response}     PartialUpdateBooking.json
+    #validar a persistência da alteração com GET
+    ${response}     GET /booking/${id}
+    Status Should Be    200
+    Dictionary Should Contain Sub Dictionary    ${response.json()}    ${body}

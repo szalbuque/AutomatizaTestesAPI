@@ -51,6 +51,14 @@ PUT /booking/${id}
     ${response}    PUT    url=${BASE_URL}/booking/${id}    json=${body}    headers=${headers}
     RETURN    ${response}
 
+PATCH /booking/${id}
+    [Arguments]    ${body}
+    # insere o token no header
+    ${headers}    Create Dictionary    Cookie=token\=${TOKEN}
+    # faz o PUT usando o id passado como parâmetro e o body que estava no arquivo
+    ${response}    PATCH    url=${BASE_URL}/booking/${id}    json=${body}    headers=${headers}
+    RETURN    ${response}
+
 Select Random BookingId From Json
     [Arguments]    ${response}
     #usar a biblioteca Random do Python
@@ -59,10 +67,10 @@ Select Random BookingId From Json
     RETURN    ${bookingid}
 
 # função auxiliar para fazer atualização da reserva
-# troca o valor de DepositId
-Change DepositId
+# troca o valor de DepositPaid
+Change DepositPaid
     [Arguments]     ${response}  
-    ${depositid}    Convert To Boolean    ${response.json()}[depositid]
-    ${depositid}    Set Variable If    ${depositid}==${True}    ${False}    ${True}
-    ${body}    Create Dictionary    depositid=${depositid}
+    ${depositpaid}    Convert To Boolean    ${response.json()}[depositpaid]
+    ${depositpaid}    Set Variable If    ${depositpaid}==${True}    ${False}    ${True}
+    ${body}    Create Dictionary    depositpaid=${depositpaid}
     RETURN    ${body}
