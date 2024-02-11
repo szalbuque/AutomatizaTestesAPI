@@ -52,3 +52,16 @@ TC5: criar reserva
     ${response}    GET /booking/${id}
     Status Should Be    200
     Dictionaries Should Be Equal    ${booking}    ${response.json()}
+
+TC6: editar reserva
+    [Setup]   Wrapper POST /auth
+    #autenticação
+    #pegar id ao acaso
+    ${response}    GET /booking
+    ${id}     Select Random BookingId From Json     ${response}
+
+    #pegar o corpo daquele id
+    ${response}     GET /booking/id
+    #copiar o token
+    #alterar com o PATCH
+    #validar status code e contrato

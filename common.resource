@@ -58,3 +58,11 @@ Select Random BookingId From Json
     ${bookingid}    Evaluate    random.choice($response.json())['bookingid']    modules=random
     RETURN    ${bookingid}
 
+# função auxiliar para fazer atualização da reserva
+# troca o valor de DepositId
+Change DepositId
+    [Arguments]     ${response}  
+    ${depositid}    Convert To Boolean    ${response.json()}[depositid]
+    ${depositid}    Set Variable If    ${depositid}==${True}    ${False}    ${True}
+    ${body}    Create Dictionary    depositid=${depositid}
+    RETURN    ${body}
