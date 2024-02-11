@@ -14,3 +14,7 @@ TC 3: obter reserva por ID
     ${response}    GET /booking
     ${id}     Select Random BookingId From Json    ${response}
     ${response}    GET /booking/${id}
+
+    Status Should Be    200
+    Validate Json    ${response}    GetBookingIds.json
+
